@@ -12,7 +12,7 @@ interface IInputProps{
 export const Input = ({inputType, error, label, value, name, handleChange}:IInputProps) => {
   return (
     <div className={styles.input}>
-      <label>{label}:</label>
+      <label className={styles.labels}>{label}:</label>
       <input onChange={handleChange} name={name} type={inputType} value={value}/>
       {error && <span style={{color: "red"}}>{error}</span>}
     </div>
